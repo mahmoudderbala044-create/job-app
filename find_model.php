@@ -1,0 +1,2 @@
+<?php
+// DELETE THIS FILE
