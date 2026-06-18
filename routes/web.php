@@ -8,8 +8,11 @@ use App\Http\Controllers\Job_vacancyController;
 use Illuminate\Support\Facades\Mail;
 
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return 'Laravel Works';
 });
 
 Route::middleware(['auth','role:job-seeker'])->group(function () {
