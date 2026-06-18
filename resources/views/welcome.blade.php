@@ -1,4 +1,4 @@
-<x-main-layout title="Shaghalni - Find your dream job">
+<!-- <x-main-layout title="Shaghalni - Find your dream job">
 
     <div x-data="{ show: false }" x-init="setTimeout(() => show = true, 300)">
         <div class="inline-flex items-center mb-2" x-cloak x-show="show" x-transition:enter="transition ease-out duration-700"
@@ -32,4 +32,4 @@
         </div>
     </div>
 
-</x-main-layout>
+</x-main-layout> --><h1>hello weirdo</h1>
