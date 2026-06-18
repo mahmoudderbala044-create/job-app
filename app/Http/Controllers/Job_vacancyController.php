@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Smalot\PdfParser\Parser;
 use App\Http\serveise\generateai;
 
-class Job_vacancyController extends Controller
+class Job_VacancyController extends Controller
 {
     public function show(string $id)
     {
