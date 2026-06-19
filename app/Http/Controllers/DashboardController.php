@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Job_Application;
-use App\Models\Job_Vacancy;
+use App\Models\JobApplication;
+use App\Models\JobVacancy;
 use App\Models\Company;
 class DashboardController extends Controller
 {
     public function index(Request $request)
     {
-        $query=Job_Vacancy::query();
+        $query=JobVacancy::query();
 
 
         if ($request->filled('type') && $request->type !== 'all_types') {

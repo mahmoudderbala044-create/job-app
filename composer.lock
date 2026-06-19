@@ -1064,12 +1064,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mahmoudderbala044-create/job-share.git",
-                "reference": "38398142f70d7004662f13b8be6ba0dd4fa63868"
+                "reference": "5dd7de04387a298d68e930a600b829f3568744e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mahmoudderbala044-create/job-share/zipball/38398142f70d7004662f13b8be6ba0dd4fa63868",
-                "reference": "38398142f70d7004662f13b8be6ba0dd4fa63868",
+                "url": "https://api.github.com/repos/mahmoudderbala044-create/job-share/zipball/5dd7de04387a298d68e930a600b829f3568744e4",
+                "reference": "5dd7de04387a298d68e930a600b829f3568744e4",
                 "shasum": ""
             },
             "require": {
@@ -1097,7 +1097,7 @@
                 "source": "https://github.com/mahmoudderbala044-create/job-share/tree/main",
                 "issues": "https://github.com/mahmoudderbala044-create/job-share/issues"
             },
-            "time": "2026-06-17T06:33:15+00:00"
+            "time": "2026-06-19T08:47:31+00:00"
         },
         {
             "name": "laravel/framework",
