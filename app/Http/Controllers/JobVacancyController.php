@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Job_Vacancy;
+use App\Models\JobVacancy;
 use App\Models\Resume;
-use App\Models\Job_Application;
+use App\Models\JobApplication;
 use App\Http\Requests\StoreApplyRequest;
 use Illuminate\Support\Facades\Storage;
 use Smalot\PdfParser\Parser;
@@ -14,13 +14,13 @@ class JobVacancyController extends Controller
 {
     public function show(string $id)
     {
-        $job = Job_Vacancy::findOrFail($id);
+        $job = JobVacancy::findOrFail($id);
         return view('job_vacancy.show', compact('job'));
     }
 
     public function apply(string $id)
     {
-        $job     = Job_Vacancy::findOrFail($id);
+        $job     = JobVacancy::findOrFail($id);
         $resumes = Resume::where('user_id', auth()->id())->get();
 
         return view('job_vacancy.apply', compact('job', 'resumes'));
@@ -28,9 +28,9 @@ class JobVacancyController extends Controller
 
     public function processApply(StoreApplyRequest $request, string $id, generateai $generateai)
     {
-        $job = Job_Vacancy::findOrFail($id);
+        $job = JobVacancy::findOrFail($id);
 
-        $alreadyApplied = Job_Application::where('job_vacancy_id', $job->id)
+        $alreadyApplied = JobApplication::where('job_vacancy_id', $job->id)
             ->where('user_id', auth()->id())
             ->exists();
 
@@ -90,7 +90,7 @@ class JobVacancyController extends Controller
         }
 
         // 3. حفظ التقديم
-        Job_Application::create([
+        JobApplication::create([
             'job_vacancy_id'        => $job->id,
             'user_id'               => auth()->id(),
             'resume_id'             => $resumeId,
