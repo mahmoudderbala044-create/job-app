@@ -68,6 +68,9 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-white">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('job_applications.index')" :active="request()->routeIs('job_applications.index')" class="text-white">
+                {{ __('My Applications') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->

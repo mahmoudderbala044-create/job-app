@@ -18,7 +18,7 @@
                     <div class="mb-8 border-b border-zinc-800/50 pb-8">
                         <h3 class="text-2xl font-bold text-white mb-6">Welcome, {{ Auth::user()->name ?? 'Yahya' }}</h3>
                         
-                        <form method="GET" action="{{ route('dashboard') }}" id="search-filter-form">
+                        <form method="GET" action="{{ route('dashboard') }}" id="filter-form" class="w-full">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                                 <!-- Search Bar -->
                                 <div class="relative w-full sm:max-w-md">
@@ -32,7 +32,7 @@
 
                                 <!-- Filter Dropdown -->
                                 <div class="relative shrink-0 w-full sm:w-48 mt-3 sm:mt-0">
-                                    <select name="type" onchange="document.getElementById('search-filter-form').submit()" class="block w-full pl-4 pr-10 py-2.5 text-sm font-medium text-zinc-200 bg-[#09090b] border border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm appearance-none cursor-pointer hover:border-zinc-500">
+                                    <select name="type" onchange="document.getElementById('filter-form').submit()" class="block w-full pl-4 pr-10 py-2.5 text-sm font-medium text-zinc-200 bg-[#09090b] border border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-all shadow-sm appearance-none cursor-pointer hover:border-zinc-500">
                                        <option value="all_types" {{ request('type', 'all_types') == 'all_types' ? 'selected' : '' }}>All Types</option>
                                        <option value="Full-Time" {{ request('type') == 'Full-Time' ? 'selected' : '' }}>Full-Time</option>
                                        <option value="Part-Time" {{ request('type') == 'Part-Time' ? 'selected' : '' }}>Part-Time</option>

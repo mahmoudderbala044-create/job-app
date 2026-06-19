@@ -12,16 +12,16 @@ class DashboardController extends Controller
     {
         $query=JobVacancy::query();
 
-
         if ($request->filled('type') && $request->type !== 'all_types') {
             $query->where('type', $request->type);
         }
-
-        if ($request->has('search')) {
-            $query->where('title', 'like', "%$request->search%")
-            ->orWhere('location', 'like', "%$request->search%")
-            ->orWhereHas('company', function ($query) use ($request) {
-                $query->where('name', 'like', "%$request->search%");
+        if ($request->filled('search')) {
+            $query->where(function ($q) use ($request) {
+                $q->where('title', 'like', "%{$request->search}%")
+                  ->orWhere('location', 'like', "%{$request->search}%")
+                  ->orWhereHas('company', function ($q2) use ($request) {
+                      $q2->where('name', 'like', "%{$request->search}%");
+                  });
             });
         }
 
