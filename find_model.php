@@ -1,2 +1,2 @@
 <?php
-// DELETE THIS FILE
+// File deleted
